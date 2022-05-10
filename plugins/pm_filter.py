@@ -136,7 +136,7 @@ async def advantage_spoll_choker(bot, query):
             await auto_filter(bot, query, k)
         else:
             k = await query.message.edit('Sorry Sweetheart, that Movie you are looking for, is not on my DataBase. Use @mcrequestbot to request for it. please make sure you follow the request format there or my owner will skip your request. Thank youuu 🥰')
-            await asyncio.sleep(30)
+            await asyncio.sleep(10)
             await k.delete()
 
 
@@ -163,14 +163,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     "Babe I'm not connected to any groups!\nCheck /connections or connect me to any groups",
                     quote=True
                 )
-                return await query.answer('Sweetie Piracy Is a fucking Crime😁')
+                return await query.answer('Sweetie your request is been processed 😁')
 
         elif chat_type in ["group", "supergroup"]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('Babe Piracy Is a Sin🤣')
+            return await query.answer('I am processing your request🤝')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == "creator") or (str(userid) in ADMINS):
@@ -224,7 +224,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode="md"
         )
-        return await query.answer('Babe Piracy Is a Crime, stop it.😑')
+        return await query.answer('Babe I am processing your request❤')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -268,7 +268,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('My love, Piracy Is Crime😀')
+        return await query.answer('My love, Piracy Is a Crime😀')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -286,7 +286,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"sweetie some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('Babe Piracy Is a Crime')
+        return await query.answer('sweetie your request is been processed')
     elif query.data == "backcb":
         await query.answer()
 
@@ -297,7 +297,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "Sweetie there are no active connections!! Connect me to some groups first.",
             )
-            return await query.answer('My love, Piracy Is a Big Crime')
+            return await query.answer('I am processing your request🤝')
         buttons = []
         for groupid in groupids:
             try:
@@ -406,7 +406,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('Search Here 🔍', switch_inline_query_current_chat=''),
             InlineKeyboardButton('Updates Channel🍿🎬', url='https://t.me/Lordship_Movies')
         ], [
             InlineKeyboardButton('Series Bot 🎥', url='https://t.me/Lordship_series'),
@@ -421,7 +420,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('Sweetie Piracy Is a Crime')
+        await query.answer('I am processing your request🤝')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
@@ -567,7 +566,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if str(grp_id) != str(grpid):
             await query.message.edit("Sweetie, your Active Connection Has Been Changed. Go To /settings.")
-            return await query.answer('Piracy Is a Crime')
+            return await query.answer('your request is been processed🤝')
 
         if status == "True":
             await save_group_settings(grpid, set_type, False)
