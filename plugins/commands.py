@@ -23,7 +23,7 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('Updates Channel🍿🎬', url='https://t.me/Lordship_Movies')
+                InlineKeyboardButton('Updates Channel🍿🎬', url='https://t.me/+tR2yktDV20A4ZTE0')
             ],
             [
                 InlineKeyboardButton('Help ⚙', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -45,10 +45,7 @@ async def start(client, message):
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('Search Here 🔍', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('Updates Channel🍿🎬', url='https://t.me/Lordship_Movies')
-            ],[
-            InlineKeyboardButton('Series Bot🎥', url='https://t.me/Lordship_series'),
-            InlineKeyboardButton('Adult Bot🔞', url='https://t.me/AdultEmpire_xxx')
+            InlineKeyboardButton('Updates Channel🍿🎬', url='https://t.me/+tR2yktDV20A4ZTE0')
             ],[
             InlineKeyboardButton('Help ⚙', callback_data='help'),
             InlineKeyboardButton('🥰🅾︎🆆︎🅽︎🅴︎🆁︎', callback_data='owner')
@@ -70,7 +67,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "♻️ JOIN MY UPDATES CHANNEL", url=invite_link.invite_link
+                    "♻️ CLICK HERE AND JOIN MY UPDATES CHANNEL", url=invite_link.invite_link
                 )
             ]
         ]
@@ -94,11 +91,8 @@ async def start(client, message):
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('Search Here 🔍', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('Updates Channel🍿🎬', url='https://t.me/Lordship_Movies')
+            InlineKeyboardButton('Updates Channel🍿🎬', url='https://t.me/+tR2yktDV20A4ZTE0')
             ], [
-            InlineKeyboardButton('Series Bot 🎥', url='https://t.me/Lordship_series'),
-            InlineKeyboardButton('Adult Bot 🔞', url='https://t.me/AdultEmpire_xxx')
-            ],[
             InlineKeyboardButton('Help ⚙', callback_data='help'),
             InlineKeyboardButton('🥰🅾︎🆆︎🅽︎🅴︎🆁︎', callback_data='owner')
         ]]
