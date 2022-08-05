@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('Sorry Sweetheart, that Movie you are looking for, is not on my DataBase. Use @mcrequestbot to request for it. please make sure you follow the request format there or my owner will skip your request. Thank youuu 🥰')
+            k = await query.message.edit('Sorry Sweetheart, that Movie you are looking for, is not on my DataBase. Check your spellings...')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -407,10 +407,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('Search Here 🔍', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('Updates Channel🍿🎬', url='https://t.me/Lordship_Movies')
-        ], [
-            InlineKeyboardButton('Series Bot 🎥', url='https://t.me/Lordship_series'),
-            InlineKeyboardButton('Adult Bot 🔞', url='https://t.me/AdultEmpire_xxx')
+            InlineKeyboardButton('Updates Channel🍿🎬', url='https://t.me/+54Saghjq-fA0NWZk')
         ], [
             InlineKeyboardButton('Help ⚙', callback_data='help'),
             InlineKeyboardButton('My Dev 🧑‍💻', callback_data='owner')
@@ -441,7 +438,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "owner":
         buttons = [[
-            InlineKeyboardButton('🅃🄴🄻🄴🄶🅁🄰🄼', url='https://t.me/Manlikerex')
+            InlineKeyboardButton('🅃🄴🄻🄴🄶🅁🄰🄼', url='https://t.me/Certified_cross_promoter')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
             InlineKeyboardButton('🔐 Close', callback_data='close_data')
@@ -672,14 +669,14 @@ async def auto_filter(client, msg, spoll=False):
              InlineKeyboardButton(text="NEXT ⏭️", callback_data=f"next_{req}_{key}_{offset}")]
         )
         btn.insert(0,
-            [InlineKeyboardButton(text="🔞 JOIN OUR ADULT CHANNEL 🔞",url="https://t.me/+83dNsgyhMmI4OTNk")]
+            [InlineKeyboardButton(text="JOIN OUR MOVIE CHANNEL",url="https://t.me/+54Saghjq-fA0NWZk")]
         )
     else:
         btn.append(
             [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
         )
         btn.insert(0,
-            [InlineKeyboardButton(text="🔞 JOIN OUR ADULT CHANNEL 🔞",url="https://t.me/+83dNsgyhMmI4OTNk")]
+            [InlineKeyboardButton(text="JOIN OUR ADULT CHANNEL",url="https://t.me/+54Saghjq-fA0NWZk")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
